@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Page Icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <header class="snap_header">
+      <!-- Logo -->
+      <div class="snap_logo">
+        <img src="./images/logo.svg" alt="Snap Logo" />
+      </div>
+      <!-- Navigation -->
+      <nav class="nav" id="nav">
+        <button class="btn_close_menu" id="close_menu" type="button">
+          <img src="./images/icon-close-menu.svg" alt="" />
+        </button>
+        <ul class="nav-container">
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#"
+              >Features<img
+                src="./images/icon-arrow-down.svg"
+                alt="Expand Features Menu"
+                aria-haspopup="true"
+                aria-expanded="false"
+            /></a>
+            <!-- Dropdown Menu(Features) -->
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><img src="./images/icon-todo.svg" alt="" />Todo List</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><img src="./images/icon-calendar.svg" alt="" />Calendar</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><img src="./images/icon-reminders.svg" alt="" />Reminders</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><img src="./images/icon-planning.svg" alt="" />Planning</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#"
+              >Company
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt="Expand Features Menu"
+                aria-haspopup="true"
+                aria-expanded="false"
+            /></a>
+            <!-- Dropdown Menu(Company) -->
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">History</a></li>
+              <li><a class="dropdown-item" href="#">Our Team</a></li>
+              <li><a class="dropdown-item" href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+        <div class="login_register_container">
+          <a class="login" href="#">Login</a>
+          <a class="register" href="#">Register</a>
+        </div>
+      </nav>
+      <button class="btn_menu" id="open_menu" type="button">
+        <img src="./images/icon-menu.svg" alt="" />
+      </button>
+      <!-- Buttons for login and Register -->
+    </header>
+
+    <main>
+      <!-- Left side/Content -->
+      <article class="content">
+        <!-- Details/Content -->
+        <section class="details">
+          <h1>Make remote work</h1>
+          <p>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <a class="learn_more" href="#">Learn more</a>
+        </section>
+        <!-- Images/Logo -->
+        <section class="partner_logos">
+          <img src="./images/client-databiz.svg" alt="" />
+          <img src="./images/client-audiophile.svg" alt="" />
+          <img src="./images/client-meet.svg" alt="" />
+          <img src="./images/client-maker.svg" alt="" />
+        </section>
+      </article>
+      <!-- Image -->
+      <section class="snap_hero_img">
+        <img src="./images/image-hero-mobile.png" alt="" />
+      </section>
+    </main>
+    <div class="overlay"></div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

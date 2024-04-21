@@ -1,0 +1,184 @@
+*, *::before, *::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: "Epilogue", sans-serif;
+    font-size:18px;
+}
+/* Header */
+.snap_header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 15px;
+}
+.snap_logo{
+    margin-top:10px;
+    display:inline-block;
+}
+.snap_logo img{
+    display:block;
+}
+.nav{
+    font-size:0.9em;
+    padding:20px;
+    display:none;
+    /* transition: all 0.3s ease-in; */
+}
+.nav.active_nav{
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    position:absolute;
+    width:65%;
+    z-index:2;
+    right:-250px;
+    top:0;
+    bottom:0;
+    background:hsl(0, 0%, 98%);
+}
+.nav.active_nav.slide-in {
+    animation: slideIn 0.3s forwards; /* Apply slide-in animation */
+}
+
+.nav.active_nav.slide-out {
+    animation: slideOut 0.3s forwards; /* Apply slide-out animation */
+}
+.btn_menu, .btn_close_menu{
+    border:none;
+    background:transparent;
+}
+.btn_close_menu{
+    align-self:flex-end;
+}
+.nav .nav-container{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+.nav .nav-container .nav-item{
+    list-style: none;
+}
+.nav .nav-container .nav-link{
+    color:hsl(0, 0%, 41%);
+    text-decoration: none;
+}
+/* login/register buttons */
+.nav .login_register_container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:15px;
+}
+.nav .login_register_container > a{
+    color:hsl(0, 0%, 41%);
+    text-decoration: none;
+}
+.nav .login_register_container .register{
+    border:1.5px solid hsl(0, 0%, 41%);
+    border-radius:15px;
+    text-align: center;
+    padding:0.7rem 0;
+    width:100%;
+}
+
+
+/* Overlay */
+.overlay{
+    display:none;
+}
+.overlay.show_overlay{
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    z-index:1;
+    background:hsla(0, 0%, 8%, 0.5);
+}
+
+.dropdown ul{
+    display:none;
+}
+.dropdown ul.show_dropdown{
+    display:block;
+}
+/* Main */
+main{
+    margin-top:10px;
+    display:flex;
+    flex-direction: column-reverse;
+    gap:40px;
+}
+.content{
+    text-align: center;
+}
+.content .details{
+    margin-bottom:60px;
+}
+.content .details h1{
+    font-size:2em;
+    margin-bottom:15px;
+}
+.content .details p{
+    line-height:1.5em;
+    text-wrap: balance;
+    font-size:0.9em;
+    font-weight:500;
+    color:hsl(0, 0%, 41%);
+    margin-bottom:30px;
+}
+.content .details .learn_more{
+    padding:0.8rem 1.3rem;
+    text-decoration: none;
+    font-size:0.9em;
+    font-weight:500;
+    border-radius:15px;
+    color:hsl(0, 0%, 98%);
+    background:hsl(0, 0%, 8%);
+}
+.content .partner_logos{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.content .partner_logos img{
+    height:auto;;
+    width:65px;
+}
+.content .partner_logos img:nth-of-type(2){
+    width:45px;
+}
+/* IMG */
+.snap_hero_img{
+    display:inline-block;
+    width:100%;
+    height:auto;
+}
+.snap_hero_img img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+
+@keyframes slideIn {
+    from {
+        right: -250px; /* Start off-screen */
+    }
+    to {
+        right: 0; /* Slide to the right edge */
+    }
+}
+
+@keyframes slideOut {
+    from {
+        right: 0; /* Start at the right edge */
+    }
+    to {
+        right: -250px; /* Slide off-screen */
+    }
+}
