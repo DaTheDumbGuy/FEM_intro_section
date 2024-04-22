@@ -15,7 +15,7 @@ body{
     padding:10px 15px;
 }
 .snap_logo{
-    margin-top:10px;
+    margin:10px 40px 0 0;
     display:inline-block;
 }
 .snap_logo img{
@@ -25,7 +25,7 @@ body{
     font-size:0.9em;
     padding:20px;
     display:none;
-    /* transition: all 0.3s ease-in; */
+    font-weight:500;
 }
 .nav.active_nav{
     display:flex;
@@ -33,6 +33,7 @@ body{
     gap:30px;
     position:absolute;
     width:65%;
+    max-width:300px;
     z-index:2;
     right:-250px;
     top:0;
@@ -56,7 +57,7 @@ body{
 .nav .nav-container{
     display:flex;
     flex-direction: column;
-    gap:20px;
+    gap:25px;
 }
 .nav .nav-container .nav-item{
     list-style: none;
@@ -99,13 +100,47 @@ body{
     z-index:1;
     background:hsla(0, 0%, 8%, 0.5);
 }
+.dropdown:nth-child(1) .nav-link img{
+    margin-left:5px;
+}
+.dropdown .nav-link img{
+    margin-bottom:2px;
+}
 
-.dropdown ul{
+.dropdown{
+    position:relative;
+}
+
+.dropdown .dropdown-menu{
     display:none;
+    padding:20px 0 0 20px ;
 }
-.dropdown ul.show_dropdown{
+.dropdown .dropdown-menu li {
+    margin-bottom:15px;
+    list-style: none;
+}
+.dropdown .dropdown-menu li:last-of-type{
+    margin:0;
+}
+.dropdown .dropdown-menu li .dropdown-item {
+    display:flex;
+    align-items: center;
+    text-decoration: none;
+    font-size:0.9em;
+    color:hsl(0, 0%, 41%);
+}
+.dropdown .dropdown-menu li .dropdown-item img{
+    margin-bottom:4px;
+}
+.dropdown .dropdown-menu li:nth-of-type(even) .dropdown-item img{
+    margin-right:17px;
+}
+.dropdown .dropdown-menu li:nth-of-type(odd) .dropdown-item img{
+    margin-right:20px;
+}
+/* .dropdown .dropdown-menu.show_dropdown{
     display:block;
-}
+} */
 /* Main */
 main{
     margin-top:10px;
@@ -154,31 +189,153 @@ main{
 }
 /* IMG */
 .snap_hero_img{
-    display:inline-block;
-    width:100%;
-    height:auto;
+    width: 100%;
+    height: 300px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/image-hero-mobile.png);
 }
-.snap_hero_img img{
+/* .snap_hero_img img{
     width:100%;
     height:auto;
     display:block;
+} */
+
+
+/* Media Queries */
+
+@media (min-width:1024px) {
+    .snap_header{
+        padding:10px 25px;
+        justify-content: flex-start;
+    }
+    .snap_header .snap_logo{
+        margin-top:5px;
+    }
+
+    /* .dropdown .dropdown-menu.show_dropdown{
+        background:red;
+        position:absolute;
+        left:-50%;
+    } */
+    .nav{
+        display:flex;
+        align-items: center;
+        flex-grow: 2;
+        justify-content: space-between;
+    }
+    .nav .nav-container{
+        flex-direction: row;
+    }
+    
+    .btn_menu, .btn_close_menu{
+        display:none;
+    }
+    .nav .login_register_container{
+        gap:40px;
+        flex-direction: row;
+    }
+    
+    .nav .login_register_container .register{
+        padding:0.7rem 1rem;
+    }
+    
+    /* main */
+    main{
+        padding:0 120px 0 150px;
+        flex-direction: row;
+    }
+    .content{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top:100px;
+        text-align: unset;
+    }
+
+    .content .details h1{
+        font-size:3.5em;
+        margin-bottom:40px;
+    }
+    .content .details p{
+        margin-bottom:50px;
+    }
+    .content .partner_logos{
+        justify-content: space-between;
+        padding-right:80px;
+    }
+    .content .partner_logos img{
+        height:auto;;
+        width:75px;
+    }
+    .content .partner_logos img:nth-of-type(2){
+        width:55px;
+    }
+    .snap_hero_img{
+        background-position: center;
+        background-image: url(../images/image-hero-desktop.png);
+        width:90%;
+        height:600px;
+    }
+
+   
 }
-
-
+@media (min-width:1440px){
+    main{
+        padding:0 120px 0 150px;
+    }
+    .content{
+        padding-top:100px;
+        justify-content: space-between;
+        width:100%;
+    }
+    .content .details h1{
+        padding-right:120px;
+        
+        font-size:4.2em;
+    }
+    .content .details p{
+        text-wrap: wrap;
+        padding-right:195px;
+        font-size:1em;
+    }
+    .snap_hero_img{
+        background-position: right;
+        width:80%;
+        height:600px;
+    }
+    .content .details .learn_more{
+        font-size:1.1em;
+        padding:1rem 1.5rem;
+    }
+    .content .partner_logos{
+        margin:0;
+        padding-right:140px;
+    }
+    .content .partner_logos img{
+        height:auto;;
+        width:85px;
+    }
+    .content .partner_logos img:nth-of-type(2){
+        width:65px;
+    }
+}
+/* Animations */
 @keyframes slideIn {
     from {
-        right: -250px; /* Start off-screen */
+        right: -250px; 
     }
     to {
-        right: 0; /* Slide to the right edge */
+        right: 0; 
     }
 }
 
 @keyframes slideOut {
     from {
-        right: 0; /* Start at the right edge */
+        right: 0; 
     }
     to {
-        right: -250px; /* Slide off-screen */
+        right: -250px; 
     }
 }
