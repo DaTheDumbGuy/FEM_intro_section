@@ -180,6 +180,11 @@ main{
     border-radius:15px;
     color:hsl(0, 0%, 98%);
     background:hsl(0, 0%, 8%);
+    border:2px solid hsl(0, 0%, 8%);
+}
+.content .details .learn_more:active{
+    background:hsl(0, 0%, 98%);
+    color:hsl(0, 0%, 8%);
 }
 .content .partner_logos{
     display:flex;
@@ -289,12 +294,17 @@ main{
     .content .partner_logos img:nth-of-type(2){
         width:55px;
     }
+    .content .details .learn_more{
+        font-size:1.1em;
+        padding:1rem 1.5rem;
+    }
     .snap_hero_img{
         background-position: center;
         background-image: url(../images/image-hero-desktop.png);
         width:90%;
         height:600px;
     }
+    
 
    
 }
@@ -321,10 +331,6 @@ main{
         background-position: right;
         width:80%;
         height:600px;
-    }
-    .content .details .learn_more{
-        font-size:1.1em;
-        padding:1rem 1.5rem;
     }
     .content .partner_logos{
         margin:0;
