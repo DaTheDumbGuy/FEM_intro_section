@@ -1,4 +1,3 @@
-const btnMenu = document.getElementById("open_menu");
 const nav = document.getElementById("nav");
 const overlay = document.querySelector('.overlay');
 
